@@ -1,8 +1,8 @@
 """
-@author: Lerc
-@title: Canvas Tab
-@nickname: Canvas Tab
-@description: This extension provides a full page image editor with mask support. There are two nodes, one to receive images from the editor and one to send images to the editor.
+@author: MFish
+@title: Canvas Tab (segmentation)
+@nickname: Canvas Tab (seg)
+@description: This is a fork of Lerc's Canvas Tab extension specifically for working with segmentation maps
 """
 
 

@@ -3,7 +3,7 @@ body {
   margin: 0;
   font-family: sans-serif;
   --top-panel-height : 64px;
-  --left-panel-width : 80px;
+  --left-panel-width : 132px;
   --right-panel-width : 210px;
   background:#f8fcff;
   --label : "image";
@@ -181,18 +181,43 @@ svg.tool.button {
 
 
 #palette {
-  position:absolute;
-  left:0px;
-  top:var(--top-panel-height);
-  width:var(--left-panel-width);
-  bottom:0px;
+  position: absolute;
+  left: 0px;
+  top: var(--top-panel-height);
+  width: var(--left-panel-width);
+  bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  scrollbar-width: 2px;
+  max-width: var(--left-panel-width);
 }
 .paletteentry {
-    width :32px;
-    height :32px;
-    display:inline-block;
-    border:1px solid black;
-    margin : 3px;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  display: flex;
+  align-items: bottom;
+  justify-content: center;
+  flex: auto;
+  border: 1px solid black;
+  margin: 1px;
+  font-family: sans-serif;
+  width: 64px; /* Adjusted width considering border and margin */
+  height: 64px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.icon-holder {
+  display: block;
+  position: absolute;
+  background-position: center;
+  background-size: cover;
+  width: 64px;
+  height: 64px;
+  z-index: 3;
+  mix-blend-mode: multiply;
 }
 
 .paletteentry.erase {
@@ -252,11 +277,13 @@ input[type="color"] {
   bottom : 32px;
   left : 12px;
   z-index : 1;
+  display: none;
 }
 #background {
   position: absolute;
   bottom : 20px;
   left : 24px;
+  display: none;
 }
 #global_overlay {
   z-index: 1111;
