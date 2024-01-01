@@ -1,3 +1,5 @@
+NOTE: This is a fork with specific functions for drawing segmentation maps.....
+
 # canvas_tab
 ComfyUI canvas editor page
 
